@@ -27,6 +27,8 @@ public class ex04 {
                 System.out.println("시스템을 종료합니다.");
                 break;
             }
+            else
+                System.out.println("올바른 입력값이 아닙니다. 다시 선택해주세요.");
         }
     }
 
