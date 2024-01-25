@@ -1,0 +1,22 @@
+package ex.ex06;
+
+public class Ex01MaxCounter {
+    private int count = 0, max;
+
+    public Ex01MaxCounter(int max) {
+        this.max = max;
+    }
+
+    public void increment()
+    {
+        if (count >= max)
+            System.out.println("최대 값을 초과할 수 없습니다.");
+        else
+            count++;
+    }
+
+    public int getCount()
+    {
+        return (count);
+    }
+}
