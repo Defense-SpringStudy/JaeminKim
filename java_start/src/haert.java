@@ -27,6 +27,5 @@ public class haert {
         }
         System.out.println("\n\n");
         Thread.sleep(500);
-        System.out.println("김미나 안나뷰우우우우우♥");
     }
 }
