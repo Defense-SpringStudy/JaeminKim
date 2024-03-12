@@ -2,8 +2,6 @@ package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
-import hello.hellospring.repository.MemoryMemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,7 +25,7 @@ public class MemberService {
         // 같은 이름의 중복 회원X
         validateDuplicateMember(member); // 중복 회원 검증
 
-        memberRepository.save(member);
+        memberRepository.Save(member);
         return member.getId();
     }
 

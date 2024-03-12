@@ -11,23 +11,16 @@ import javax.sql.DataSource;
 
 @Configuration
 public class SpringConfig {
-
-    public final DataSource dataSource;
-    private final EntityManager em;
-
-    public SpringConfig(DataSource dataSource, EntityManager em) {
-        this.dataSource = dataSource;
-        this.em = em;
+    private final MemberRepository memberRepository;
+    @Autowired
+    public SpringConfig(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
     }
-
-
-
     @Bean
     public MemberService memberService() {
-        return new MemberService(memberRepository());
+        return new MemberService(memberRepository);
     }
-    @Bean
-    public MemberRepository memberRepository() {
-        return new JpaMemberRepository(em);
-    }
+//    @Bean
+//    public MemberRepository memberRepository() {
+//    }
 }

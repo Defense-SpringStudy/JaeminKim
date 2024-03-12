@@ -13,7 +13,7 @@ public class JdbcMemberRepository implements MemberRepository {
         this.dataSource = dataSource;
     }
     @Override
-    public Member save(Member member) {
+    public Member Save(Member member) {
         String sql = "insert into member(name) values(?)";
         Connection conn = null;
         PreparedStatement pstmt = null;
